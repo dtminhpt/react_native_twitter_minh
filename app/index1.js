@@ -1,20 +1,33 @@
-import React from 'react';
-import { Button, Platform, ScrollView, StyleSheet } from 'react-native';
+import React, { Component } from 'react';
+import { Button, Platform, ScrollView, StyleSheet, View, Text } from 'react-native';
 import { DrawerNavigator } from 'react-navigation';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
 const MyNavScreen = ({ navigation, banner }) => (
-  <ScrollView style={styles.container}>
+    <View>
+        <Header title="Home"/>
+        <ScrollView style={styles.container}>
     <Button
       onPress={() => navigation.navigate('DrawerOpen')}
       title="Open drawer"
     />
     <Button onPress={() => navigation.goBack(null)} title="Go back" />
   </ScrollView>
+    </View>
 );
 
 const InboxScreen = ({ navigation }) => (
-  <MyNavScreen banner={'Inbox Screen'} navigation={navigation} />
+  <View>
+        <Header title="Inbox"/>
+        <View style={{alignItems: 'center', justifyContent: 'center'}}>
+            <Button onPress={() => navigation.navigate('DrawerOpen')}
+                title="Open drawer 2"
+            />
+            <View>
+                <Text>Inbox</Text>
+            </View>
+        </View>
+    </View>
 );
 InboxScreen.navigationOptions = {
   drawerLabel: 'Inbox',
@@ -25,6 +38,38 @@ InboxScreen.navigationOptions = {
       style={{ color: tintColor }}
     />
   ),
+};
+
+class Header extends Component {
+    render() {
+        const {title} = this.props;
+        return(
+            <View style={{margin:50}}>
+                <Text>Header - {title}</Text>
+            </View>
+        )
+    }
+}
+
+const SettingScreen = ({ navigation }) => (
+    <View>
+        <Header title="Settings"/>
+        <View style={{alignItems: 'center', justifyContent: 'center'}}>
+            <Button onPress={() => navigation.navigate('DrawerOpen')}
+                title="Open drawer 2"
+            />
+            <View>
+                <Text>Settings</Text>
+            </View>
+        </View>
+    </View>
+);
+
+SettingScreen.navigationOptions = {
+    drawerLabel: 'Settings', 
+    drawerIcon: ({ tintColor }) => (
+        <MaterialIcons name="drafts" size={24} style={{color: tintColor}} />
+    )
 };
 
 const DraftsScreen = ({ navigation }) => (
@@ -47,9 +92,13 @@ const DrawerExample = DrawerNavigator(
       path: '/sent',
       screen: DraftsScreen,
     },
+    Settings: {
+        path: '/settings', 
+        screen: SettingScreen,
+    }
   },
   {
-    initialRouteName: 'Drafts',
+    initialRouteName: 'Settings',
     contentOptions: {
       activeTintColor: '#e91e63',
     },
