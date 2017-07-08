@@ -16,6 +16,7 @@ export default class LoginScreen extends Component{
     }
 
     _loginTwitter() {
+        this.props.navigation.dispatch({type: 'Login', baobao: "minh"})
         twitter({
             appId: 'LGEvzx2CFjplU2TaFDHjb7s0b',
             appSecret: 'NMP2yFRoWviPKEC8UgMlBszj0RrAp1cx0v2z3ytaVGPm1Qc6yi',

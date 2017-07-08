@@ -4,9 +4,13 @@ import { Provider, connect } from 'react-redux';
 import { addNavigationHelpers, StackNavigator } from 'react-navigation';
 
 import LoginScreen from '../components/LoginScreen';
+import HomeScreen from '../components/HomeScreen';
+import DrawerExample from '../components/Drawer';
 
 export const AppNavigator = StackNavigator({
   Login: { screen: LoginScreen },
+  Home: {screen: HomeScreen}, 
+  Drawer: { screen: DrawerExample}
 });
 
 const AppWithNavigationState = ({ dispatch, nav }) => (
