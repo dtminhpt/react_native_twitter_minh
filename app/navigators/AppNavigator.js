@@ -22,8 +22,14 @@ AppWithNavigationState.propTypes = {
   nav: PropTypes.object.isRequired,
 };
 
+/**
+ * Provide store properties to the component.
+ */
 const mapStateToProps = state => ({
   nav: state.nav,
 });
 
+/**
+ * Connect the component to the store and export it.
+ */
 export default connect(mapStateToProps)(AppWithNavigationState);

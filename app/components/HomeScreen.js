@@ -28,16 +28,8 @@ class HomeScreen extends Component {
             <View>
                 <View>
                     <LoginStatusMessage/>
-
-                    {/*<AuthButton/>*/}
                 </View>
-                
-
                 <Text>Home Page</Text>
-                {/*<Button
-                    onPress={() => dispatch(NavigationActions.navigate({ routeName: 'Drawer' }))}
-                    title="Drawer"
-                />*/}
             </View>
         )
     }
