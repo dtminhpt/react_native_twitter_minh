@@ -6,11 +6,13 @@ import { addNavigationHelpers, StackNavigator } from 'react-navigation';
 import LoginScreen from '../components/LoginScreen';
 import HomeScreen from '../components/HomeScreen';
 import DrawerExample from '../components/Drawer';
+import TweetScreen from '../components/tweet.js'
 
 export const AppNavigator = StackNavigator({
   Login: { screen: LoginScreen },
   Home: {screen: HomeScreen}, 
-  Drawer: { screen: DrawerExample}
+  Drawer: { screen: DrawerExample},
+  Tweet: {screen: TweetScreen }
 });
 
 const AppWithNavigationState = ({ dispatch, nav }) => (

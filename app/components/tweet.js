@@ -86,7 +86,7 @@ export default class TweetScreen extends Component {
                         style={{
                         fontSize: 17,
                         color: 'black'
-                    }}>trandangkhoa</Text>
+                    }}>minhdinh</Text>
                     <Text
                         style={{
                         fontSize: 17,

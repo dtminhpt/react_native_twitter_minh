@@ -34,7 +34,7 @@ import HeartIcon from './heart.js'
 import NavBarItem from '../components/NavBarItem';
 
 
-class HomeScreen extends Component {
+class TimelineScreen extends Component {
     static navigationOptions =  ({navigation}) => ({
         title: 'Home Screen',
         headerRight: <Button title="New" />,
@@ -241,4 +241,4 @@ const mapStatetoProps = state => ({
     mynamehere: state.auth.username
 });
 
-export default connect(mapStatetoProps)(HomeScreen);
+export default connect(mapStatetoProps)(TimelineScreen);

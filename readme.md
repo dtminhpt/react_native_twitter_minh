@@ -7,9 +7,9 @@ Time spent: **25** hours spent in total
 The following **required** functionality is completed:
 
 - [x] Hamburger menu (**Hint** You can refer [react-native-drawer](https://github.com/root-two/react-native-drawer))
-   - [ ] Dragging anywhere in the view should reveal the menu.
-   - [ ] The menu should include links to your profile, the home timeline, and the mentions view.
-   - [ ] The menu can look similar to the example or feel free to take liberty with the UI.
+   - [x] Dragging anywhere in the view should reveal the menu.
+   - [x] The menu should include links to your profile, the home timeline, and the mentions view.
+   - [x] The menu can look similar to the example or feel free to take liberty with the UI.
 - [ ] Profile page
    - [ ] Contains the user header view
    - [ ] Contains a section with the users basic stats: # tweets, # following, # followers
@@ -44,6 +44,7 @@ Please list two areas of the assignment you'd like to **discuss further with you
 
 
 ## Video Walkthrough
+![walkthrough](Assign3.gif)
 
 Here's a walkthrough of implemented user stories:
 

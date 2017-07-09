@@ -2,10 +2,10 @@
 import twitter, {auth} from 'react-native-twitter';
 
 const tokens = {
-            consumerKey: 'uAPWsVhEDTe9TQDzIkwvtNfdE',
-            consumerSecret: 'DGxTmweBXEIvSYlyosfXqOCmrGwWe8kk6GzMmJIGdSURp47kc7',
-            accessToken: "218441511-FkcJ71dUzbljY0JR2jERCwdzFLwOMRD0mtm64uQY",
-            accessTokenSecret: "UyXJoybCam8Gd6A125Ga7e7R1irMVrcqU4vtXL0pEmFdb" 
+            consumerKey: 'LGEvzx2CFjplU2TaFDHjb7s0b',
+            consumerSecret: 'NMP2yFRoWviPKEC8UgMlBszj0RrAp1cx0v2z3ytaVGPm1Qc6yi',
+            accessToken: "4335576924-UBPzLn1uDirIZshITtfUBH5hYbpZLFoTyVsMWOA",
+            accessTokenSecret: "1nuVNBhHNCMrh1mrm0BZD0QUt53NYnPyRIcgN2eLNBeno" 
 }
 
 export const twitterAPI = {
