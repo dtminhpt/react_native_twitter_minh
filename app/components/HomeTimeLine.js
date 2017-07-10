@@ -35,13 +35,21 @@ import NavBarItem from '../components/NavBarItem';
 
 
 class TimelineScreen extends Component {
-    static navigationOptions =  ({navigation}) => ({
-        title: 'Home Screen',
-        headerRight: <Button title="New" />,
-        headerLeft: <AuthButton />,
-        
-    })
+    static navigationOptions =  ({navigation}) => {
+        const { goToTweetScreen } = navigation.state.params || {}
+        return {
+            title: 'Home Screen',
+            headerRight: <Button title="New" onPress={goToTweetScreen}/>,
+            headerLeft: <AuthButton />,
+        }
+    }
 
+    componentDidMount() {
+        let { navigation } = this.props
+        navigation.setParams({
+            goToTweetScreen: () => this.goToTweetScreen()
+        })
+    }
 
     constructor(props) {
         super(props);
@@ -63,7 +71,9 @@ class TimelineScreen extends Component {
     }
 
     onRefeshListView() {
-        this.setState({isRefreshing: true});
+        this.setState({
+            isRefreshing: true
+        });
         this.getHomeTimeline();
     }
 
@@ -72,20 +82,16 @@ class TimelineScreen extends Component {
     }
 
     async updateStatus(){
-
+        alert("Update status")
     }
 
     goToTweetScreen(){
-        alert("NENENENEN")
-        this.props.navigator.push({
-        title:'Tweet Screen',
-        component:TweetScreen
-        })
+        this.props.navigation.navigate('Tweet')
     }
 
     async getHomeTimeline(params = {}) {
         const json = await twitterAPI.getHomeTimeLine().then((item) =>{
-            //console.log("HelloMMIMMMMMMMMMMMMMM- getHomeTimeline- getHomeTimeline" + item);
+            //console.log(item);
             return item;
         }).done((item) => {
             
@@ -180,11 +186,11 @@ class TimelineScreen extends Component {
     }
 
     handleRetweet(){
-
+        alert("Handle Retweet")
     }
 
     handleReply(){
-        
+        alert("Handle Reply")
     }
 
      handleLikeButton = async (rowID) =>{

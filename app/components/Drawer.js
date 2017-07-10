@@ -34,7 +34,7 @@ const timeLineDrawerIcon = ({ tintColor }) => <MaterialIcons name="drafts" size=
 
 const loginNavOptions = getDrawerNavigationOptions('Login', 'brown', 'white', loginDrawerIcon);
 const profileNavOptions = getDrawerNavigationOptions('Profile', 'brown', 'white', profileDrawerIcon);
-const timeLineNavOptions = getDrawerNavigationOptions('Profile', 'brown', 'white', timeLineDrawerIcon);
+const timeLineNavOptions = getDrawerNavigationOptions('TimeLine', 'brown', 'white', timeLineDrawerIcon);
 
 const Drawer = DrawerNavigator({
   Login: { screen: LoginScreen, navigationOptions: loginNavOptions },
